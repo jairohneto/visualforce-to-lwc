@@ -55,12 +55,13 @@ export default class CreateMixedRecordsWireFunctions extends LightningElement {
         // Consider to use the generateRecordInputForCreate() function instead.
         // The function will create the record input for you, including only fields that are createable.
         // Check https://developer.salesforce.com/docs/component-library/documentation/en/50.0/lwc/reference_generate_record_input_update
+        const closeDate = '2025-02-01';
         const recordInput = {
             apiName: OPPORTUNITY_OBJECT.objectApiName,
             fields: {
                 [OPPORTUNITY_NAME_FIELD.fieldApiName]: this.opportunityName,
                 [OPPORTUNITY_STAGENAME_FIELD.fieldApiName]: 'Prospecting',
-                [OPPORTUNITY_CLOSEDATE_FIELD.fieldApiName]: new Date(2025, 1, 1)
+                [OPPORTUNITY_CLOSEDATE_FIELD.fieldApiName]: closeDate
             }
         };
 
